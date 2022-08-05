@@ -1,0 +1,51 @@
+{
+  "meta" : {
+    "label" : "Koverse KDP Dataset",
+    "description" : "Read/Write records to a KDP dataset"
+  },
+
+  "readable" : true,
+  "writable" : true,
+
+  "params": [
+    {
+      "name": "separator_input",
+      "label": "Input Parameters",
+      "type": "SEPARATOR"
+    },
+    {
+      "name": "api_configuration_preset",
+      "label": "API configuration preset",
+      "type": "PRESET",
+      "parameterSetId": "api-configuration",
+      "mandatory": true
+    },
+    {
+      "type": "BOOLEAN",
+      "name": "use_existing_dataset",
+      "label": "Use existing KDP dataset",
+      "defaultValue": false
+    },
+    {
+      "name": "dataset_id",
+      "label": "Dataset ID",
+      "type": "STRING",
+      "mandatory": "model.use_existing_dataset",
+      "visibilityCondition": "model.use_existing_dataset"
+    },
+    {
+      "name": "dataset_name",
+      "label": "New Dataset Name",
+      "type": "STRING",
+      "mandatory": "!model.use_existing_dataset",
+      "visibilityCondition": "!model.use_existing_dataset"
+    },
+    {
+      "name": "batch_size",
+      "label": "Batch Size",
+      "type": "INT",
+      "mandatory": false,
+      "defaultValue": 1000
+    }
+  ]
+}

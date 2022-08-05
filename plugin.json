@@ -1,0 +1,14 @@
+{
+	"id": "dss-plugin-kdp4",
+	"version": "0.4.0",
+	"meta": {
+		"label": "Koverse Data Platform (KDP4)",
+		"description": "Connector for Koverse Data Platform (KDP4)",
+		"author": "Koverse",
+		"icon": "icon-list",
+		"licenseInfo": "Apache Software License version 2",
+		"url": "https://www.dataiku.com/dss/plugins/info/koverse-data-platform.html",
+		"tags": ["Connector", "Cloud", "Api", "Dataset"],
+        "supportLevel": "NOT_SUPPORTED"
+	}
+}

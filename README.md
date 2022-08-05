@@ -44,29 +44,24 @@ There are two supported authentication methods, **basic_login** and **json web t
 ![preset_jwt](resources/preset_jwt.png)
 
 
-### Write data from Dataiku DSS to KDP
+### Read/Write data from Dataiku DSS to KDP
 
-Select the 'Koverse KDP Dataset' which is a dataiku custom dataset for writing data to KDP.
-Reading from KDP is also supported by the 'Export' dataset.
+Select the 'Koverse KDP Dataset' which is a dataiku custom dataset for reading and writing data to KDP.
 
-![select_import_dataset](resources/select_import_dataset.png)
+![select_import_dataset](resources/select_dataset.png)
 
 Provide required parameters and name for the dataset. When using an existing KDP dataset, the existing data can
 be previewed:
 
 ![provide_export_dataset_parameters](resources/provide_export_dataset_parameters.png)
 
-### Read and Import Dataset from KDP
+When using the dataset to create a new KDP4 dataset you can provide the dataset name. 
+![creating_new_kdp4_dataset.png](resources/creating_new_kdp4_dataset.png)
 
-Select the 'Koverse KDP Import Dataset' which is a dataiku custom dataset for reading and importing data from KDP.
-The 'import' dataset does not support writing data to kdp4.
+After creation of the new dataset, you can select 'use_an_existing_dataset' and put in the dataset_id 
+of the new KDP4 dataset to preview the data. 
 
-![select_import_dataset](resources/select_import_dataset.png)
-
-Provide required parameters and name for the dataset:
-
-![provide_dataset_parameters](resources/provide_dataset_parameters.png)
-
+![preview_dataset_data.png](resources/preview_dataset_data.png)
 
 
 ### For development: Creating new version of plugin

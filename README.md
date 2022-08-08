@@ -2,6 +2,10 @@
 
 ## Connector for Dataiku DSS to connect with the Koverse Data Platform (KDP4)
 
+### Prerequisite
+Requires an installation of Dataiku - Data Science Studio (DSS)  
+Installation instructions for mac: https://www.dataiku.com/product/get-started/mac/
+
 ### Installation
 
 The plugin can be installed from the plugin page in Dataiku DSS:

@@ -1,0 +1,82 @@
+{
+    "meta": {
+        "label": "API configuration",
+        "description": "Define presets for users to call the API with specific credentials",
+        "icon": "icon-file-text"
+    },
+    "defaultDefinableAtProjectLevel": true,
+    "defaultDefinableInline": false,
+    "definableInline": false,
+    "params": [
+        {
+            "name": "separator_authentication",
+            "label": "Authentication",
+            "type": "SEPARATOR",
+            "description": "Please refer to KDP documentation"
+        },
+        {
+            "name": "auth_type",
+            "label": "Authentication method",
+            "type": "SELECT",
+            "selectChoices": [
+                {
+                    "value": "basic_login",
+                    "label": "KDP Login"
+                },
+                {
+                    "value": "kdp_token",
+                    "label": "KDP JSON Web Token"
+                }
+            ],
+            "mandatory": true,
+            "defaultValue": "basic_login"
+        },
+        {
+            "name": "kdp_jwt",
+            "label": "KDP Json Web Token",
+            "description": "Token used to call KDP Services.",
+            "type": "PASSWORD",
+            "mandatory": false,
+            "visibilityCondition": "model.auth_type == 'kdp_token'"
+        },
+        {
+            "name": "email",
+            "label": "Email",
+            "description": "User's email address to KDP",
+            "type": "STRING",
+            "mandatory": false,
+            "visibilityCondition": "model.auth_type == 'basic_login'"
+        },
+        {
+            "name": "password",
+            "label": "Password",
+            "description": "User's password to KDP",
+            "type": "PASSWORD",
+            "mandatory": false,
+            "visibilityCondition": "model.auth_type == 'basic_login'"
+        },
+        {
+          "name": "workspace_id",
+          "label": "Workspace Id",
+          "description": "KDP Workspace Id",
+          "type": "STRING",
+          "mandatory": true
+        },
+        {
+            "name": "kdp_url",
+            "label": "KDP url",
+            "description": "Base Url for KDP endpoints.",
+            "type": "STRING",
+            "defaultValue": "https://api.app.koverse.com",
+            "mandatory": false
+        },
+        {
+            "name": "path_to_ca_file",
+            "label": "Path To SSL Certification Authority File",
+            "description": "Path To SSL Certification Authority File",
+            "type": "STRING",
+            "defaultValue": "",
+            "mandatory": false
+        }
+    ]
+}

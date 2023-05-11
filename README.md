@@ -21,7 +21,7 @@ The plugin can be installed from the plugin page in Dataiku DSS:
 ![add_plugin_from_git_repo](resources/add_plugin_from_git_repo.png)
 
 Next step is to create a code environment for the plugin (which installs needed dependencies:
-                                                          kdp-python-connector, kdp-api-python-client)
+                                                          kdp-python-connector with included kdp-api-python-client)
 ![add_code_environment](resources/add_code_environment.png)
 
 

@@ -26,10 +26,62 @@
                 {
                     "value": "kdp_token",
                     "label": "KDP JSON Web Token"
+                },
+                {
+                    "value": "keycloak_login",
+                    "label": "Keycloak Login"
                 }
             ],
             "mandatory": true,
             "defaultValue": "basic_login"
+        },
+        {
+            "name": "keycloak_host",
+            "label": "Keycloak host name",
+            "description": "Host location of the Keycloak server.",
+            "type": "STRING",
+            "mandatory": true,
+            "visibilityCondition": "model.auth_type == 'keycloak_login'"            
+        },
+        {
+            "name": "keycloak_realm",
+            "label": "Keycloak realm",
+            "description": "Keycloak realm.",
+            "type": "STRING",
+            "mandatory": true,
+            "visibilityCondition": "model.auth_type == 'keycloak_login'"              
+        },
+        {
+            "name": "keycloak_client_id",
+            "label": "Keycloak client ID",
+            "description": "Client ID for Keycloak.",
+            "type": "STRING",
+            "mandatory": true,
+            "visibilityCondition": "model.auth_type == 'keycloak_login'"  
+        },
+        {
+            "name": "keycloak_client_secret",
+            "label": "Keycloak client secret",
+            "description": "Keycloak client secret.",
+            "type": "PASSWORD",
+            "mandatory": true,
+            "visibilityCondition": "model.auth_type == 'keycloak_login'"  
+        },
+        {
+            "name": "keycloak_username",
+            "label": "Keycloak username",
+            "description": "Username of Keycloak user.",
+            "type": "STRING",
+            "mandatory": true,
+            "visibilityCondition": "model.auth_type == 'keycloak_login'"  
+        },
+        {
+            "name": "keycloak_password",
+            "label": "Keycloak password",
+            "description": "Password for the Keycloak user.",
+            "type": "PASSWORD",
+            "mandatory": true,
+            "visibilityCondition": "model.auth_type == 'keycloak_login'"  
         },
         {
             "name": "kdp_jwt",

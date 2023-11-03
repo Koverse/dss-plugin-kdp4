@@ -74,6 +74,9 @@ You can test changes outside DSS with the use_connector example (following the i
 or add additional examples/tests in the same pattern. It will require the dependencies listed in requirements.txt
 to be installed (code-env/python/spec/requirements.txt)
 
+### <bold><mark>Taking into account locally packaged modules/packages<mark><bold>
+<mark>Due to core Dataiku python API library compatibility issues with the Koverse kdp-api-python-client, both the kdp-api-python-client and kdp-python-connector have been included in the python-lib directory, in addition to the auth_utils module. Due to a mismatch between the Dataiku required version of urllib3 and the version of requests specified by the kdp-api-python-connector, with specifies an incompatible range for urllib3 versions, those packages should be placed directly in the kdp-lib directory.<mark>
+
 From kdp-dataiku-connector root... (may require sudo, or use of venv)
 
 ```pip install -r code-env/python/spec/requirements.txt```

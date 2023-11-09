@@ -31,13 +31,13 @@ def get_jwt(preset, kdp_conn, logger):
         workspace_id = preset.get("workspace_id")
 
         authentication_details = kdp_conn.create_keycloak_authentication_token(username=keycloak_username,
-                                                                       realm=keycloak_realm,
-                                                                       client_id=keycloak_client_id,
-                                                                       client_secret=keycloak_client_secret,
-                                                                       password=keycloak_password,
-                                                                       workspace_id=workspace_id,
-                                                                       host=keycloak_host,
-                                                                       verify_ssl=False)
+                                                                               realm=keycloak_realm,
+                                                                               client_id=keycloak_client_id,
+                                                                               client_secret=keycloak_client_secret,
+                                                                               password=keycloak_password,
+                                                                               workspace_id=workspace_id,
+                                                                               host=keycloak_host,
+                                                                               verify_ssl=False)
         jwt = authentication_details.get("access_token")
 
         logger.info('jwt has been created via keycloak')
